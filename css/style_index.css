@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+
+:root {
+    --bg-body: #1d1d1d;
+    --bg-navbar: #3b3b3b;
+    --text-color: #E4E4E4;
+    --text-color-secudaria: #CCCCCC;
+    --color-hover: #EE2020;
+}
+
+*{ 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-body);
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    max-width: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.logo:hover {
+    color: #EE2020;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style:none;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+/* ANINMAÇÃO DOS LINKS */
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-hover);
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 100%;
+}
+/* /ANINMAÇÃO DOS LINKS */
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: var(--color-hover);
+    font-size: 0.75rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase ;
+}
+
+.contato:hover {
+    background-color: var(--bg-body);
+    color: var(--color-hover);;
+    box-shadow: 0 0 8px var(--color-hover);
+    text-transform: uppercase;
+}
+/* /NAVBAR */
+
+/* HEADER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem; 
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px var(--color-hover);
+    z-index: -100;
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .conteudo-header h4 {
+    padding-bottom: 1rem;
+    color: var(--text-color-secudaria);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+header .conteudo-header h1 {
+    padding-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 4rem;
+}
+
+header .conteudo-header h1 span {
+    color: var(--color-hover);
+    text-transform: uppercase;
+}
+
+header .conteudo-header p {
+    padding-bottom: 2rem;
+    color: var(--text-color-secudaria);
+}
+
+.btn-header {
+    font-size: 1rem;
+}
+
+header .imagem img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 20px;
+    }
+}
+
+.title {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.div-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 4rem;
+    filter: invert();
+    padding-bottom: 1rem;
+}
+
+.card-title {
+    color: var(--text-color-secudaria);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.card-title span{
+    color: var(--color-hover);
+}
+.card-text span{
+    text-transform: uppercase;
+}
+
+.card-text {
+    color: var(--text-color-secudaria);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 4 - 20px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--bg-navbar);
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    background-color: #4b4b4b;
+    box-shadow: 0 0 8px #757575;
+}
+
